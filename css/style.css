@@ -138,3 +138,89 @@ footer {
     font-size: 0.95rem;
   }
 }
+
+/* =====================
+   Card List
+===================== */
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* =====================
+   Card
+===================== */
+.card {
+  border: 1px solid #eaeaea;
+  padding: 2rem;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+/* Header */
+.card-header {
+  margin-bottom: 0.75rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.card-period {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Content */
+.card-desc {
+  margin-bottom: 0.75rem;
+  color: #444;
+}
+
+.card-points {
+  padding-left: 1rem;
+  color: #555;
+}
+
+.card-points li {
+  margin-bottom: 0.25rem;
+}
+
+/* =====================
+   Responsive (Tablet & Mobile)
+===================== */
+@media (max-width: 768px) {
+
+  .card-list {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .card {
+    border: none;
+    border-bottom: 1px solid #eee;
+    border-radius: 0;
+    padding: 1.5rem 0;
+  }
+
+  .card + .card {
+    margin-top: 1.75rem;
+  }
+}
+
+/* =====================
+   Small Mobile
+===================== */
+@media (max-width: 480px) {
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-desc {
+    font-size: 0.95rem;
+  }
+}
+
