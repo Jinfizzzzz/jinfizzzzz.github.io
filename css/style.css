@@ -248,6 +248,9 @@ footer {
    Responsive (Tablet & Mobile)
 ===================== */
 @media (max-width: 768px) {
+  .card-points li { margin-bottom: 0.4rem; }
+  
+  .card-desc { line-height: 1.75; }
 
   .card-list {
     grid-template-columns: 1fr;
