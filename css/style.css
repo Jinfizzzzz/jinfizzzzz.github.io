@@ -57,34 +57,47 @@ ul {
 
 .about-hero,
 .about-method,
-.about-section {
-  text-align: left; /* 중앙/좌측 혼용 방지 */
+.about-career {
+  text-align: left;
 }
 
+/* 섹션 간 상하 간격을 명시적으로 통일 */
+.about-hero { 
+  padding-top: 2.5rem;
+  padding-bottom: 1.75rem;
+}
+
+.about-method,
+.about-career {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-top: 1px solid #eee; /* 선택: 섹션 구분 */
+}
+
+/* 제목-본문 간격 */
 .about-hero h1 {
-  font-size: 2rem;
+  margin: 0 0 1rem;
   line-height: 1.3;
-  margin-bottom: 1.25rem;
 }
 
-.about-hero .lead {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 0.75rem;
-  color: #333;
-}
-
-.about-hero .scope {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: #666;
-}
-
-.section-title {
-  font-size: 1.05rem;
+.about-method h2,
+.about-career h2 {
+  margin: 0 0 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
-  margin: 2.25rem 0 0.75rem;
+}
+
+/* 문단 리듬 (About에서만) */
+.about-hero p,
+.about-method p,
+.about-career p {
+  margin: 0 0 0.9rem;
+  line-height: 1.7;
+}
+
+.about-hero p:last-child,
+.about-method p:last-child,
+.about-career p:last-child {
+  margin-bottom: 0;
 }
 
 /* About 문단 기본 리듬 통일 */
@@ -110,12 +123,10 @@ ul {
     line-height: 1.6;
   }
   
-  .about-hero h1 {
-    font-size: 1.55rem;
-  }
-  .section-title {
-    margin-top: 1.75rem;
-  }
+  .about-hero { padding-top: 2rem; padding-bottom: 1.25rem; }
+  .about-method,
+  .about-career { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+  .about-hero h1 { font-size: 1.55rem; }
 }
 
 /* =====================
@@ -311,3 +322,50 @@ footer {
   }
 }
 
+/* Career timeline */
+.timeline {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.timeline-item {
+  padding: 1.25rem 0;
+}
+
+.timeline-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-period {
+  font-size: 0.9rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+.timeline-org {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.timeline-role {
+  margin: 0 0 0.5rem;
+  color: #333;
+}
+
+.timeline-points {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.timeline-points li {
+  margin-bottom: 0.35rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .timeline-item { padding: 1rem 0; }
+}
