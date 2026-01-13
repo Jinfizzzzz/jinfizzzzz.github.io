@@ -35,6 +35,61 @@ ul {
 }
 
 /* =====================
+   About: alignment + spacing normalization
+===================== */
+.content-narrow {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about-hero,
+.about-method,
+.about-section {
+  text-align: left; /* 중앙/좌측 혼용 방지 */
+}
+
+.about-hero h1 {
+  font-size: 2rem;
+  line-height: 1.3;
+  margin-bottom: 1.25rem;
+}
+
+.about-hero .lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.about-hero .scope {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+.section-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 2.25rem 0 0.75rem;
+}
+
+/* About 문단 기본 리듬 통일 */
+.content-narrow p {
+  margin-bottom: 0.9rem;
+}
+
+/* 모바일에서 타이포/여백만 미세 조정 */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 1.55rem;
+  }
+  .section-title {
+    margin-top: 1.75rem;
+  }
+}
+
+/* =====================
    Header
 ===================== */
 header {
