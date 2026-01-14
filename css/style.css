@@ -322,7 +322,9 @@ footer {
   }
 }
 
-/* Career timeline */
+/* =====================
+  Career timeline
+===================== */
 .timeline {
   display: grid;
   gap: 1.25rem;
@@ -368,4 +370,34 @@ footer {
 
 @media (max-width: 768px) {
   .timeline-item { padding: 1rem 0; }
+}
+
+/* =====================
+  Contact page spacing 
+===================== */
+.contact-section {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+
+/* =====================
+  Contact link list spacing
+===================== */
+
+.contact-links {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.contact-links a {
+  display: inline-block;
 }
