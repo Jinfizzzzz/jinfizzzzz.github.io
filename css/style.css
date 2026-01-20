@@ -34,6 +34,48 @@ ul {
   padding: 3rem 1.5rem;
 }
 
+/* ===== Theme tokens ===== */
+:root{
+  color-scheme: light dark;
+
+  /* surfaces */
+  --bg: #ffffff;
+  --surface: #ffffff;      /* card background */
+  --surface-2: #f7f7f8;    /* optional: subtle section bg */
+
+  /* text */
+  --text: #111111;
+  --text-muted: #5a5f66;
+
+  /* lines */
+  --border: #e6e6e8;
+
+  /* accent (optional, later) */
+  --accent: #111111;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg: #0b0d10;
+    --surface: #121824;     
+    --surface-2: #0f141e;  
+
+    --text: #e9eef5;
+    --text-muted: #aab4c0;  
+
+    --border: #243042;
+
+    --accent: #e9eef5;
+  }
+}
+
+/* apply */
+body{
+  background: var(--bg);
+  color: var(--text);
+}
+
+
 /* =====================
    About: alignment + spacing normalization
 ===================== */
@@ -61,7 +103,6 @@ ul {
   text-align: left;
 }
 
-/* 섹션 간 상하 간격을 명시적으로 통일 */
 .about-hero { 
   padding-top: 2.5rem;
   padding-bottom: 1.75rem;
@@ -71,7 +112,7 @@ ul {
 .about-career {
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
-  border-top: 1px solid #eee; /* 선택: 섹션 구분 */
+  border-top: 1px solid #eee; 
 }
 
 /* 제목-본문 간격 */
@@ -86,7 +127,7 @@ ul {
   font-weight: 600;
 }
 
-/* 문단 리듬 (About에서만) */
+/* 문단 리듬 */
 .about-hero p,
 .about-method p,
 .about-career p {
@@ -127,6 +168,29 @@ ul {
   .about-method,
   .about-career { padding-top: 1.25rem; padding-bottom: 1.25rem; }
   .about-hero h1 { font-size: 1.55rem; }
+}
+
+/* Korean-friendly line breaking */
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  word-break: keep-all;
+  line-break: strict;
+}
+
+/* Mobile typography tuning */
+@media (max-width: 768px) {
+  .container { padding: 0 16px; }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    line-height: 1.7;
+  }
 }
 
 /* =====================
@@ -247,42 +311,40 @@ footer {
    Card
 ===================== */
 .card {
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--border);
   padding: 2rem;
-  border-radius: 6px;
-  background-color: #fff;
+  border-radius: 10px;
+  background-color: var(--surface);
 }
 
 /* Header */
-.card-header {
-  margin-bottom: 0.75rem;
-}
+.card-header { margin-bottom: 0.75rem; }
 
-.card-title {
+.card-title{
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  color: var(--text);
 }
 
-.card-period {
+.card-period{
   font-size: 0.85rem;
-  color: #777;
+  color: var(--text-muted);
 }
 
 /* Content */
-.card-desc {
+.card-desc{
   margin-bottom: 0.75rem;
-  color: #444;
+  color: var(--text-muted);
 }
 
-.card-points {
+.card-points{
   padding-left: 1rem;
-  color: #555;
+  color: var(--text-muted);
 }
 
-.card-points li {
-  margin-bottom: 0.25rem;
-}
+.card-points li{ margin-bottom: 0.25rem; }
+
 
 /* =====================
    Responsive (Tablet & Mobile)
