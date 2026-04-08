@@ -236,7 +236,7 @@ body {
 /* =====================
    Header
 ===================== */
-header {
+body > header {
   position: sticky;
   top: 0;
   z-index: 100;
@@ -248,6 +248,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* container의 3rem 수직 패딩을 헤더용으로 덮어씀 */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* 카드 내부 header 태그가 페이지 헤더 스타일을 상속하지 않도록 리셋 */
+.card-header {
+  position: static;
+  background: transparent;
+  border-bottom: none;
+  z-index: auto;
 }
 
 .site-title {
@@ -334,9 +345,9 @@ footer {
 
   .header-inner {
     flex-wrap: wrap;
-    gap: 0.5rem 0;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    gap: 0.4rem 0;
   }
 
   /* 이름은 좌측, lang-switch는 우측 — 한 줄 */
@@ -344,16 +355,23 @@ footer {
     flex: 1;
   }
 
-  /* nav는 두 번째 줄, 가로 나열 유지 */
+  /* nav는 두 번째 줄, 한 줄 가로 나열 */
   nav {
     width: 100%;
     order: 3;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   nav ul {
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.5rem 1.25rem;
+    flex-wrap: nowrap;
+    gap: 0 1.1rem;
+  }
+
+  nav a {
+    font-size: 0.875rem;
+    white-space: nowrap;
   }
 
   body {
@@ -403,10 +421,11 @@ footer {
 }
 
 .tag-btn {
-  padding: 0.35rem 0.85rem;
+  padding: 0.5rem 1.1rem;
+  min-height: 2.5rem;
   border: 1px solid var(--border);
   border-radius: 999px;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   background: transparent;
   cursor: pointer;
@@ -505,7 +524,7 @@ footer {
 
   .card-list {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 0;
   }
 
   .card {
@@ -513,15 +532,11 @@ footer {
     border-bottom: 1px solid var(--border);
     border-radius: 0;
     background-color: transparent;
-    padding: 1.5rem 0;
+    padding: 1.25rem 0;
   }
 
   .card:hover {
     transform: none;
-  }
-
-  .card + .card {
-    margin-top: 0;
   }
 }
 
