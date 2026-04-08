@@ -333,14 +333,27 @@ footer {
   }
 
   .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem 0;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  /* 이름은 좌측, lang-switch는 우측 — 한 줄 */
+  .site-title {
+    flex: 1;
+  }
+
+  /* nav는 두 번째 줄, 가로 나열 유지 */
+  nav {
+    width: 100%;
+    order: 3;
   }
 
   nav ul {
-    flex-direction: column;
-    gap: 0.75rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
   }
 
   body {
@@ -365,6 +378,60 @@ footer {
   .intro p {
     font-size: 0.95rem;
   }
+}
+
+/* =====================
+   Projects section
+===================== */
+.projects {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.section-title {
+  margin-bottom: 1.5rem;
+}
+
+/* =====================
+   Tag filters
+===================== */
+.tag-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tag-btn {
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+}
+
+.tag-btn:hover {
+  border-color: var(--text-muted);
+  color: var(--text);
+}
+
+.tag-btn.active {
+  border-color: var(--text);
+  color: var(--text);
+  font-weight: 500;
+}
+
+.card[hidden] {
+  display: none;
+}
+
+.projects + .projects {
+  margin-top: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
 }
 
 /* =====================
@@ -438,18 +505,23 @@ footer {
 
   .card-list {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 1.5rem;
   }
 
   .card {
     border: none;
     border-bottom: 1px solid var(--border);
     border-radius: 0;
+    background-color: transparent;
     padding: 1.5rem 0;
   }
 
+  .card:hover {
+    transform: none;
+  }
+
   .card + .card {
-    margin-top: 1.75rem;
+    margin-top: 0;
   }
 }
 
