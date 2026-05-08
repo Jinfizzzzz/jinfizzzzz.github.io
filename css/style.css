@@ -210,7 +210,10 @@ body{
 }
 
 /* Korean-friendly line breaking */
-html { -webkit-text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+  scrollbar-gutter: stable;
+}
 
 body {
   word-break: keep-all;
@@ -414,9 +417,25 @@ footer {
 ===================== */
 .tag-filters {
   display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.filter-primary,
+.filter-secondary {
+  display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 2rem;
+}
+
+.filter-secondary {
+  padding-left: 0.25rem;
+  border-left: 2px solid var(--border);
+}
+
+.filter-secondary[hidden] {
+  display: none;
 }
 
 .tag-btn {

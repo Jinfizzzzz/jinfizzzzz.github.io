@@ -31,20 +31,52 @@
     <h2 class="section-title">수행 프로젝트</h2>
 
     <div class="tag-filters">
-      <button class="tag-btn active" data-filter="all">전체</button>
-      <button class="tag-btn" data-filter="private">민간</button>
-      <button class="tag-btn" data-filter="public">공공</button>
+      <div class="filter-primary">
+        <button class="tag-btn active" data-filter="all">전체</button>
+        <button class="tag-btn" data-filter="manufacturing">제조업</button>
+        <button class="tag-btn" data-filter="public">공공</button>
+        <button class="tag-btn" data-filter="research">학술연구</button>
+      </div>
+      <div class="filter-secondary" hidden>
+        <button class="tag-btn active" data-sub-filter="all">전체</button>
+        <button class="tag-btn" data-sub-filter="execution">실행</button>
+        <button class="tag-btn" data-sub-filter="diagnosis">진단</button>
+        <button class="tag-btn" data-sub-filter="support">지원</button>
+      </div>
     </div>
 
     <div class="card-list">
 
-      <article class="card" data-tags="private">
+      <article class="card" data-category="manufacturing" data-subcategory="support">
         <header class="card-header">
-          <h3 class="card-title">[새솔다이아몬드] 생산관리체계 구축</h3>
-          <span class="card-period">2025 · 제조업</span>
+          <h3 class="card-title">[새솔다이아몬드공업]</br> 선행품질관리체계 구축</h3>
+          <span class="card-period">2026 · 반도체 소부장 제조업 (지원)</span>
+        </header>
+        <p class="card-desc">선행품질관리체계 구축간 공정품질 시각화 및 Ax 도입 지원</p>
+        <ul class="card-points">
+          <li>&middot; 머신러닝 기반 공정품질 주요 측정인자 도출</li>
+          <li>&middot; 현행 공정관리 내 Ax 도입 방향 커뮤니케이션</li>
+        </ul>
+      </article>
+
+      <article class="card" data-category="manufacturing" data-subcategory="diagnosis">
+        <header class="card-header">
+          <h3 class="card-title">[DN Solutions]</br> QMS 구축을 위한 품질관리수준 진단</h3>
+          <span class="card-period">2026 · 공작기계 제조업 (진단)</span>
+        </header>
+        <p class="card-desc">현행 품질관리 수준 진단 및 개선 방향 도출</p>
+        <ul class="card-points">
+          <li>&middot; 고객 Field Claim 기반 재발방지대책 수립간 문제 분석</li>
+          <li>&middot; 현행 솔루션 사용 간 미구현/미적용 항목 도출</li>
+        </ul>
+      </article> 
+
+      <article class="card" data-category="manufacturing" data-subcategory="execution">
+        <header class="card-header">
+          <h3 class="card-title">[새솔다이아몬드공업]</br> 생산관리체계 구축</h3>
+          <span class="card-period">2025 · 반도체 소부장 제조업 (실행)</span>
         </header>
         <p class="card-desc">생산관리체계 구축을 통한 생산계획 구조화, 관리체계 마련, L/Time 25% 감소, 납기준수율 22%p 증가</p>
-        <p class="card-role">"생산 운영 데이터를 의사결정 관점으로 변환"</p>
         <ul class="card-points">
           <li>&middot; 공정 운영현황 시각화 및 L/T 산출</li>
           <li>&middot; ERP 데이터 기반 관리지표 산출 및 체계 마련</li>
@@ -52,13 +84,24 @@
         </ul>
       </article>
 
-      <article class="card" data-tags="public">
+      <article class="card" data-category="manufacturing" data-subcategory="diagnosis">
         <header class="card-header">
-          <h3 class="card-title">[한국환경공단] 국가물산업클러스터 연구포럼</h3>
+          <h3 class="card-title">[새솔다이아몬드공업]</br> 생산성 및 관리현황 진단</h3>
+          <span class="card-period">2025 · 반도체 소부장 제조업 (진단)</span>
+        </header>
+        <p class="card-desc">현행 생산운영관리체계 진단 및 개선 방향 도출</p>
+        <ul class="card-points">
+          <li>&middot; 대표제품 기반 L/Time 도출</li>
+          <li>&middot; 공정흐름 시각화 기반 병목지점 파악</li>
+        </ul>
+      </article> 
+
+      <article class="card" data-category="public">
+        <header class="card-header">
+          <h3 class="card-title">[한국환경공단]</br> 국가물산업클러스터 연구포럼</h3>
           <span class="card-period">2024, 2025 · 공공</span>
         </header>
         <p class="card-desc">물산업 소부장 육성전략에 따른 연구포럼 소부장분과 운영, 연차 단위 대상 품목별 으뜸기업 선발 및 육성</p>
-        <p class="card-role">"포럼을 활용한 기업 선발·육성 운영구조 마련"</p>
         <ul class="card-points">
           <li>&middot; 기업 선정평가 및 연차평가 지표 개발</li>
           <li>&middot; 분기별 포럼 운영(간사업무)</li>
@@ -66,73 +109,60 @@
         </ul>
       </article>
 
-      <article class="card" data-tags="public">
+      <article class="card" data-category="public">
         <header class="card-header">
-          <h3 class="card-title">[기후부] 국가 초순수 산업 육성전략 수립</h3>
+          <h3 class="card-title">[기후에너지환경부]</br> 국가 초순수 산업 육성전략 수립</h3>
           <span class="card-period">2025 · 공공</span>
         </header>
         <p class="card-desc">국내외 산업 / 시장 / 정책 / 기술동향 기반 초순수 기술 자립 및 산업 진흥을 위한 전략 수립</p>
-        <p class="card-role">"전략 방향 설정을 위한 기초 판단 근거 구축"</p>
         <ul class="card-points">
           <li>&middot; 국내외 산업 / 시장 / 정책 / 기술 조사</li>
           <li>&middot; 전략 타당성 교차검증</li>
         </ul>
       </article>
 
-      <article class="card" data-tags="public">
+      <article class="card" data-category="public">
         <header class="card-header">
-          <h3 class="card-title">[한국환경공단] 국가물산업클러스터 중장기 운영계획</h3>
+          <h3 class="card-title">[한국환경공단]</br> 국가물산업클러스터 중장기 운영계획</h3>
           <span class="card-period">2024 · 공공</span>
         </header>
         <p class="card-desc">물기업 경쟁력 강화 및 글로벌화를 위한 국가물산업클러스터 제2차 중장기 운영계획 수립</p>
-        <p class="card-role">"실행 가능한 전략 과제 단위 구조화 및 검증"</p>
         <ul class="card-points">
           <li>&middot; 비전 수립에 따른 전략별 실행과제 도출</li>
           <li>&middot; 전략 타당성 검증을 위한 이해관계자 인터뷰</li>
         </ul>
       </article>
 
-      <article class="card" data-tags="public">
+      <article class="card" data-category="public">
         <header class="card-header">
-          <h3 class="card-title">[한국상하수도협회] 물산업 전문인력 양성 로드맵 구축</h3>
+          <h3 class="card-title">[한국상하수도협회]</br> 물산업 전문인력 양성 로드맵 구축</h3>
           <span class="card-period">2024 · 공공</span>
         </header>
         <p class="card-desc">유망기술에 대한 수요기업의 인력 / 역량 요구 기반 중장기 로드맵 및 교육체계 수립과 사업 고도화</p>
-        <p class="card-role">"국가 계획에 근거한 교육운영 실행방안 도출"</p>
         <ul class="card-points">
           <li>&middot; 유망 기술별 필요역량 도출</li>
           <li>&middot; 필요역량과 인력수요에 따른 교육체계도 작성</li>
         </ul>
       </article>
 
-    </div>
-  </section>
-
-  <section class="projects">
-    <h2 class="section-title">연구 경험</h2>
-
-    <div class="card-list">
-
-      <article class="card">
+      <article class="card" data-category="research">
         <header class="card-header">
-          <h3 class="card-title">[과기부] 지방소멸 대응을 위한 Right-Sizing 기술</h3>
+          <h3 class="card-title">[과학기술정보통신부]</br> 지방소멸 대응을 위한 Right-Sizing 기술</h3>
           <span class="card-period">2023 - 2024 · 정성연구</span>
         </header>
         <p class="card-desc">인구 감소와 지방 소멸의 현실에 대응하는 기술 연구</p>
-        <p class="card-role">"지역소멸에 대한 정의와 인식 탐구"</p>
         <ul class="card-points">
           <li>&middot; 지역 활동가 인터뷰 기반 담론 수집</li>
           <li>&middot; 반구조화 인터뷰 질문지 작성 및 데이터 코딩</li>
         </ul>
       </article>
 
-      <article class="card">
+      <article class="card" data-category="research">
         <header class="card-header">
-          <h3 class="card-title">[UNIST] AI 기반 디지털 페노타이핑</h3>
+          <h3 class="card-title">[울산과학기술원]</br> AI 기반 디지털 페노타이핑</h3>
           <span class="card-period">2022 - 2023 · HCI/헬스케어</span>
         </header>
         <p class="card-desc">일상생활 속 디지털 표현형 데이터 수집 및 유형화</p>
-        <p class="card-role">"실험 보조 및 데이터 경향성 분석"</p>
         <ul class="card-points">
           <li>&middot; 인터페이스 설계 보조 및 데이터 해석 지원</li>
           <li>&middot; 연구 전후 커뮤니케이션</li>
@@ -151,22 +181,62 @@
 </footer>
 
 <script>
-  const buttons = document.querySelectorAll('.tag-btn');
-  const cards = document.querySelectorAll('[data-tags]');
+  const primaryBtns = document.querySelectorAll('.filter-primary .tag-btn');
+  const secondaryBtns = document.querySelectorAll('.filter-secondary .tag-btn');
+  const secondaryFilter = document.querySelector('.filter-secondary');
+  const cards = document.querySelectorAll('[data-category]');
 
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      buttons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  let currentCategory = 'all';
+  let currentSub = 'all';
 
-      const filter = btn.dataset.filter;
-      cards.forEach(card => {
-        if (filter === 'all' || card.dataset.tags.split(' ').includes(filter)) {
-          card.removeAttribute('hidden');
+  function applyFilter() {
+    cards.forEach(card => {
+      const cat = card.dataset.category;
+      const sub = card.dataset.subcategory || '';
+
+      if (currentCategory === 'all') {
+        card.removeAttribute('hidden');
+      } else if (cat === currentCategory) {
+        if (currentCategory === 'manufacturing' && currentSub !== 'all') {
+          if (sub === currentSub) {
+            card.removeAttribute('hidden');
+          } else {
+            card.setAttribute('hidden', '');
+          }
         } else {
-          card.setAttribute('hidden', '');
+          card.removeAttribute('hidden');
         }
-      });
+      } else {
+        card.setAttribute('hidden', '');
+      }
+    });
+  }
+
+  primaryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      primaryBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentCategory = btn.dataset.filter;
+
+      if (currentCategory === 'manufacturing') {
+        secondaryFilter.removeAttribute('hidden');
+      } else {
+        secondaryFilter.setAttribute('hidden', '');
+        currentSub = 'all';
+        secondaryBtns.forEach(b => b.classList.remove('active'));
+        secondaryBtns[0].classList.add('active');
+      }
+
+      applyFilter();
+    });
+  });
+
+  secondaryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      secondaryBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentSub = btn.dataset.subFilter;
+      applyFilter();
     });
   });
 </script>

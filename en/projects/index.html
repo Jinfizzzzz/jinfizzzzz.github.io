@@ -28,36 +28,79 @@
 <main class="container">
 
   <section class="projects">
-    <h2 class="section-title">Consulting Projects</h2>
+    <h2 class="section-title">Projects</h2>
 
     <div class="tag-filters">
-      <button class="tag-btn active" data-filter="all">All</button>
-      <button class="tag-btn" data-filter="private">Private</button>
-      <button class="tag-btn" data-filter="public">Public</button>
+      <div class="filter-primary">
+        <button class="tag-btn active" data-filter="all">All</button>
+        <button class="tag-btn" data-filter="manufacturing">Manufacturing</button>
+        <button class="tag-btn" data-filter="public">Public</button>
+        <button class="tag-btn" data-filter="research">Research</button>
+      </div>
+      <div class="filter-secondary" hidden>
+        <button class="tag-btn active" data-sub-filter="all">All</button>
+        <button class="tag-btn" data-sub-filter="execution">Execution</button>
+        <button class="tag-btn" data-sub-filter="diagnosis">Diagnosis</button>
+        <button class="tag-btn" data-sub-filter="support">Support</button>
+      </div>
     </div>
 
     <div class="card-list">
 
-      <article class="card" data-tags="private">
+      <article class="card" data-category="manufacturing" data-subcategory="support">
         <header class="card-header">
-          <h3 class="card-title">Production Management System Design</h3>
-          <span class="card-period">2025 · Manufacturing</span>
+          <h3 class="card-title">[Saesol Diamond]</br> Proactive Quality Management System Design</h3>
+          <span class="card-period">2026 · Semiconductor Supply Chain Manufacturing (Support)</span>
+        </header>
+        <p class="card-desc">Process quality visualization and Ax support during PQM system buildout</p>
+        <ul class="card-points">
+          <li>&middot; Key quality metrics derivation via machine learning</li>
+          <li>&middot; Ax communication within process management</li>
+        </ul>
+      </article>
+
+      <article class="card" data-category="manufacturing" data-subcategory="diagnosis">
+        <header class="card-header">
+          <h3 class="card-title">[DN Solutions]</br> Quality Management Diagnosis for QMS</h3>
+          <span class="card-period">2026 · Mother Machine Manufacturing (Diagnosis)</span>
+        </header>
+        <p class="card-desc">Current-state quality assessment and improvement direction</p>
+        <ul class="card-points">
+          <li>&middot; Issue pattern analysis via field claims</li>
+          <li>&middot; Gap identification within existing system</li>
+        </ul>
+      </article>
+      
+      <article class="card" data-category="manufacturing" data-subcategory="execution">
+        <header class="card-header">
+          <h3 class="card-title">[Saesol Diamond]</br> Production Management System Design</h3>
+          <span class="card-period">2025 · Semiconductor Supply Chain Manufacturing (Execution)</span>
         </header>
         <p class="card-desc">Production planning structure and operational control framework</p>
-        <p class="card-role">"Production data reframed for decision-making"</p>
         <ul class="card-points">
           <li>&middot; ERP-based operational metrics design</li>
           <li>&middot; L/Time analysis and process improvement</li>
         </ul>
       </article>
 
-      <article class="card" data-tags="public">
+      <article class="card" data-category="manufacturing" data-subcategory="diagnosis">
         <header class="card-header">
-          <h3 class="card-title">Korea Water Cluster Research Forum</h3>
+          <h3 class="card-title">[Saesol Diamond]</br> Production Operations Diagnosis</h3>
+          <span class="card-period">2025 · Semiconductor Supply Chain Manufacturing (Diagnosis)</span>
+        </header>
+        <p class="card-desc">Baseline assessment of production operations and management gaps</p>
+        <ul class="card-points">
+          <li>&middot; L/Time derivation by product line</li>
+          <li>&middot; Bottleneck identification via process flow mapping</li>
+        </ul>
+      </article>
+
+      <article class="card" data-category="public">
+        <header class="card-header">
+          <h3 class="card-title">[Korea Water Cluster]</br> Research Forum</h3>
           <span class="card-period">2024, 2025 · Public Sector</span>
         </header>
         <p class="card-desc">Program operation framework for SME selection and growth</p>
-        <p class="card-role">"Program operation framework for SME selection and growth"</p>
         <ul class="card-points">
           <li>&middot; Evaluation criteria for participating companies</li>
           <li>&middot; Annual and quarterly assessment structure</li>
@@ -65,73 +108,60 @@
         </ul>
       </article>
 
-      <article class="card" data-tags="public">
+      <article class="card" data-category="public">
         <header class="card-header">
-          <h3 class="card-title">National Ultrapurewater Industry Strategy</h3>
+          <h3 class="card-title">[Ministry of Climate, Energy, Environment]</br> National Ultrapurewater Industry Strategy</h3>
           <span class="card-period">2025 · Public Sector</span>
         </header>
         <p class="card-desc">Strategic groundwork for essential industrial domain</p>
-        <p class="card-role">"Strategic groundwork for technology independence"</p>
         <ul class="card-points">
           <li>&middot; Industry, market, policy, and technology review</li>
           <li>&middot; Cross-validation of strategic assumptions</li>
         </ul>
       </article>
 
-      <article class="card" data-tags="public">
+      <article class="card" data-category="public">
         <header class="card-header">
-          <h3 class="card-title">2nd Operation Plan for Korea Water Cluster</h3>
+          <h3 class="card-title">[Korea Water Cluster]</br> 2nd Operation Plan development</h3>
           <span class="card-period">2024 · Public Sector</span>
         </header>
         <p class="card-desc">Execution-oriented translation of strategic vision</p>
-        <p class="card-role">"Execution-oriented translation of strategic vision"</p>
         <ul class="card-points">
           <li>&middot; Strategic initiative structuring from high-level vision</li>
           <li>&middot; Stakeholder interviews for feasibility validation</li>
         </ul>
       </article>
 
-      <article class="card" data-tags="public">
+      <article class="card" data-category="public">
         <header class="card-header">
-          <h3 class="card-title">Water Industry Professional Training Roadmap</h3>
+          <h3 class="card-title">[Korea Water and Wastewater Works Association]</br> Water Industry Professional Training Roadmap</h3>
           <span class="card-period">2024 · Public Sector</span>
         </header>
         <p class="card-desc">Human capital development framework for emerging technologies</p>
-        <p class="card-role">"Human capital development framework for emerging technologies"</p>
         <ul class="card-points">
           <li>&middot; Skill demand identification by technology</li>
           <li>&middot; Training roadmap aligned with national policy</li>
         </ul>
       </article>
 
-    </div>
-  </section>
-
-  <section class="projects">
-    <h2 class="section-title">Research Background</h2>
-
-    <div class="card-list">
-
-      <article class="card">
+      <article class="card" data-category="research">
         <header class="card-header">
-          <h3 class="card-title">Right-sizing Approaches for Regional Decline</h3>
+          <h3 class="card-title">[Ministry of Science, Technology, Communcation]</br> Right-sizing Approaches for Regional Decline</h3>
           <span class="card-period">2023 - 2024 · Research</span>
         </header>
         <p class="card-desc">Qualitative framing of regional decline narratives</p>
-        <p class="card-role">"Qualitative framing of regional decline narratives"</p>
         <ul class="card-points">
           <li>&middot; Stakeholder interviews with local practitioners</li>
           <li>&middot; Thematic analysis of regional decline discourse</li>
         </ul>
       </article>
 
-      <article class="card">
+      <article class="card" data-category="research">
         <header class="card-header">
-          <h3 class="card-title">AI-based Digital Phenotyping</h3>
+          <h3 class="card-title">[Ulsan Institute of Science and Technology]</br> AI-based Digital Phenotyping</h3>
           <span class="card-period">2022 - 2023 · HCI / Healthcare</span>
         </header>
         <p class="card-desc">Mobile-based experimental support and data pattern analysis</p>
-        <p class="card-role">"Mobile-based experimental support and data pattern analysis"</p>
         <ul class="card-points">
           <li>&middot; Experimental support via mobile interfaces</li>
           <li>&middot; Exploratory analysis of behavioral data patterns</li>
@@ -150,22 +180,62 @@
 </footer>
 
 <script>
-  const buttons = document.querySelectorAll('.tag-btn');
-  const cards = document.querySelectorAll('[data-tags]');
+  const primaryBtns = document.querySelectorAll('.filter-primary .tag-btn');
+  const secondaryBtns = document.querySelectorAll('.filter-secondary .tag-btn');
+  const secondaryFilter = document.querySelector('.filter-secondary');
+  const cards = document.querySelectorAll('[data-category]');
 
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      buttons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  let currentCategory = 'all';
+  let currentSub = 'all';
 
-      const filter = btn.dataset.filter;
-      cards.forEach(card => {
-        if (filter === 'all' || card.dataset.tags.split(' ').includes(filter)) {
-          card.removeAttribute('hidden');
+  function applyFilter() {
+    cards.forEach(card => {
+      const cat = card.dataset.category;
+      const sub = card.dataset.subcategory || '';
+
+      if (currentCategory === 'all') {
+        card.removeAttribute('hidden');
+      } else if (cat === currentCategory) {
+        if (currentCategory === 'manufacturing' && currentSub !== 'all') {
+          if (sub === currentSub) {
+            card.removeAttribute('hidden');
+          } else {
+            card.setAttribute('hidden', '');
+          }
         } else {
-          card.setAttribute('hidden', '');
+          card.removeAttribute('hidden');
         }
-      });
+      } else {
+        card.setAttribute('hidden', '');
+      }
+    });
+  }
+
+  primaryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      primaryBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentCategory = btn.dataset.filter;
+
+      if (currentCategory === 'manufacturing') {
+        secondaryFilter.removeAttribute('hidden');
+      } else {
+        secondaryFilter.setAttribute('hidden', '');
+        currentSub = 'all';
+        secondaryBtns.forEach(b => b.classList.remove('active'));
+        secondaryBtns[0].classList.add('active');
+      }
+
+      applyFilter();
+    });
+  });
+
+  secondaryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      secondaryBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentSub = btn.dataset.subFilter;
+      applyFilter();
     });
   });
 </script>
